@@ -3,12 +3,11 @@
 </p>
 
 
-
-
-<div style="text-align:center;">
-    <img src="https://github.com/clequemarlain/Projets_de_Master/assets/79755084/e2e4cab3-2b09-4050-8076-5fc955835ca8" alt="Image 1" width="40%">
-    <img src="https://github.com/clequemarlain/Projets_de_Master/assets/79755084/0b545ddb-585c-4041-a438-63536d05780b" alt="Image 2" width="40%">
+ <div style="text-align:center;">
+      <img src="cognetslogo1" alt="CoGNETs Logo" width="400"/>
 </div>
+
+
 # CoGNETs: Resource Allocation Algorithms for Edge Computing
 
 This repository contains learning algorithms and simulation scripts developed as part of the **CoGNETs Project (Continuums of Game NETs)**.  
