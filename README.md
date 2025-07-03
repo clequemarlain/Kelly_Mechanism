@@ -3,8 +3,9 @@
 </p>
 
 
+
  <div style="text-align:center;">
-      <img src="cognetslogo1" alt="CoGNETs Logo" width="400"/>
+    <img src="cognetslogo1.png" alt="CoGNETs Logo" style="width:40%;">
 </div>
 
 
