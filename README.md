@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/cognets_logo.png" alt="CoGNETs Logo" width="400"/>
+  <img src="images/cognetslogo1" alt="CoGNETs Logo" width="400"/>
 </p>
 
 # CoGNETs: Resource Allocation Algorithms for Edge Computing
