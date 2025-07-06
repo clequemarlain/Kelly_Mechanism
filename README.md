@@ -1,6 +1,8 @@
-<div align="center">
-    <img src="cognetslogo1.png" alt="CoGNETs Logo" width="60%">
+<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <img src="cognetslogo1.png" alt="CoGNETs Logo" style="width: 30%;">
+    <img src="avignon_university_logo.png" alt="Avignon University Logo" style="width: 30%;">
 </div>
+
 
 # CoGNETs Game Catalogue – Kelly Mechanism Simulations
 
