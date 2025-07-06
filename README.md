@@ -1,54 +1,76 @@
-
- <div style="text-align:center;">
-    <img src="cognetslogo1.png" alt="CoGNETs Logo" style="width:60%;">
+<div align="center">
+    <img src="cognetslogo1.png" alt="CoGNETs Logo" width="60%">
 </div>
 
+# CoGNETs Game Catalogue – Kelly Mechanism Simulations
 
-# CoGNETs: Resource Allocation Algorithms for Edge Computing
-
-This repository contains learning algorithms and simulation scripts developed as part of the **CoGNETs Project (Continuums of Game NETs)**.  
-The goal is to design and evaluate distributed learning algorithms for **strategic resource allocation** in edge computing networks modeled as games.
-
----
-
-## 🔍 Project Scope
-
-Edge computing environments involve multiple agents competing for limited computational resources.  
-The CoGNETs project investigates **learning dynamics and game-theoretic mechanisms** for:
-
-- Distributed resource allocation
-- Pricing and bidding in edge systems
-- Equilibrium computation and convergence analysis
+This repository contains simulation scripts and learning algorithms developed for the **CoGNETs Project (Continuums of Game NETs)**.  
+It focuses on resource allocation mechanisms modelled as games and implements several algorithms described in the **CoGNETs Game Catalogue (Section 5.1: Kelly Mechanism)**.
 
 ---
 
-## ⚙️ Algorithms Included
+## 📚 Reference: CoGNETs Game Catalogue
 
-### 🔹 Best Response Dynamics
-Agents iteratively compute their optimal resource allocation given the strategies of others.  
-Helps study:
-- Nash equilibrium convergence
-- Oscillations in strategic environments
+This repository corresponds to the **Kelly Mechanism** described in the CoGNETs Game Catalogue:
 
-### 🔹 Dual Averaging
-A no-regret learning approach where agents use gradient feedback to update their allocations.  
-Useful for:
-- Convergence in noisy settings
-- Studying learning rates and stability
+5.1.3 Learning via Dual Averaging ..................................
+5.1.4 Learning via Best Response Dynamics ..........................
+
+
+It implements:
+- The **problem formulation** and resource allocation game
+- Algorithms for **computing Nash equilibria**
+- Learning algorithms:
+  - **Dual Averaging (DAQ)**
+  - **Best Response Dynamics (SBRD)**
+  - **Exponential Learning (XL)**
 
 ---
 
-## 🚀 Getting Started
+📄 **Related Publication:**  
+_"Learning to Bid in Proportional Allocation Auctions with Budget Constraints."_  
+ 
+👉 [Access the report on HAL](https://hal.archives-ouvertes.fr/hal-XXXXXXX) (replace with your actual link)
 
-### Prerequisites
+---
 
-- Python 3.8+
-- Recommended libraries:
-  - `numpy`
-  - `scipy`
-  - `matplotlib`
 
-Install all dependencies using:
+## 🔍 Problem Scope
 
-```bash
-pip install -r requirements.txt
+The Kelly Mechanism models the resource allocation problem, which can be applied in edge networks where multiple agents (players) bid for a shared resource.  
+Each agent aims to maximize a utility function subject to budget and resource constraints.
+
+This project investigates **distributed learning dynamics** for such strategic settings.
+
+---
+
+## ⚙️ Algorithms Implemented
+
+### 🔹 Synchronous Best Response Dynamics (SBRD)
+Iterative computation of each player's best response.  
+Focus:
+- Equilibrium search
+- Convergence/divergence analysis
+
+### 🔹 Dual Averaging (DAQ)
+No-regret gradient-based learning.  
+Focus:
+- Stability in noisy or asynchronous environments
+
+### 🔹 Exponential Learning (XL)
+Acceleration of Dual Average learning dynamics to improve convergence speed.
+
+---
+
+## 🛠️ Project Structure
+
+├── build_game.py # Defines the Kelly game,  alpha-fair utility function, DA, SBRD, XL, and learning process
+├── config_table.py # Simulation configuration parameters
+├── main.py # Main script to run experiments and print results
+├── utils.py # Helper functions (plots, logging, etc.)
+└── README.md # This file
+
+
+🤝 Acknowledgements
+
+This research was conducted as part of the CoGNETs project (WP3 2024 - 2025)
