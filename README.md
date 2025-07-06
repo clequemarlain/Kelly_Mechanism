@@ -14,6 +14,7 @@ It focuses on resource allocation mechanisms modelled as games and implements se
 This repository corresponds to the **Kelly Mechanism** described in the CoGNETs Game Catalogue:
 
 5.1.3 Learning via Dual Averaging ..................................
+
 5.1.4 Learning via Best Response Dynamics ..........................
 
 
@@ -55,7 +56,7 @@ Focus:
 ### 🔹 Dual Averaging (DAQ)
 No-regret gradient-based learning.  
 Focus:
-- Stability in noisy or asynchronous environments
+- Stability in noisy.
 
 ### 🔹 Exponential Learning (XL)
 Acceleration of Dual Average learning dynamics to improve convergence speed.
@@ -65,9 +66,13 @@ Acceleration of Dual Average learning dynamics to improve convergence speed.
 ## 🛠️ Project Structure
 
 ├── build_game.py # Defines the Kelly game,  alpha-fair utility function, DA, SBRD, XL, and learning process
+
 ├── config_table.py # Simulation configuration parameters
+
 ├── main.py # Main script to run experiments and print results
+
 ├── utils.py # Helper functions (plots, logging, etc.)
+
 └── README.md # This file
 
 
