@@ -21,7 +21,7 @@ This repository implements algorithms described in the CoGNETs Game Catalogue:
 - Complete **problem formulation** for proportional resource allocation games
 - Algorithms for **computing Nash equilibria**
 - Distributed learning algorithms:
-  - **Dual Averaging (DAQ)**
+  - **Dual Averaging (DAQ and DAH)**
   - **Best Response Dynamics (SBRD)**
   - **Exponential Learning (XL)**
 
@@ -31,13 +31,12 @@ This repository implements algorithms described in the CoGNETs Game Catalogue:
 _"Learning to Bid in Proportional Allocation Auctions with Budget Constraints."_
 
 👉 [Access the report on HAL](https://hal.archives-ouvertes.fr/hal-XXXXXXX) <br>
-*(replace with your actual link)*
 
 ---
 
 ## 🔍 Problem Scope
 
-The **Kelly Mechanism** addresses resource allocation in settings such as edge networks, where multiple agents (players) compete for a shared resource by bidding.  
+The **Kelly Mechanism** addresses resource allocation in settings such as edge networks, where multiple agents (players) compete for a shared resource by bidding.
 Each agent seeks to maximize a utility function under budget and resource constraints.
 
 This project focuses on the study and simulation of **distributed learning dynamics** in such strategic, multi-agent environments.
@@ -62,29 +61,28 @@ This project focuses on the study and simulation of **distributed learning dynam
 ## 🗂️ Project Structure
 
 ```
-├── build_game.py        # Defines the Kelly game, alpha-fair utility, DA, SBRD, XL, and learning process
-├── config_table.py      # Simulation configuration parameters
-├── main.py              # Entry point: runs experiments and outputs results
-├── utils.py             # Helper functions (plotting, logging, etc.)
-└── README.md            # This file
+├── config.py            # Defines simulation parameters for running various algorithms and comparing their convergence speeds (results summarized in tables)
+├── main.py              # Main script: orchestrates experiments and generates performance results
+├── main_table.py        # Runs experiments for varying game sizes and player heterogeneity, generating tables comparing algorithm convergence speeds (steps to converge)
+├── utils.py             # Core module:
+│                         ├── Implements the Kelly game and α-fair utility functions
+│                         ├── Includes learning algorithms: Dual Averaging (DA), Synchronous Best Response Dynamics (SBRD), and Exponential Learning (XL)
+│                         └── Helper functions (plotting, etc.)
+└── README.md            # Project documentation (this file)
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/clequemarlain/Kelly_Mechanism.git
-    cd Kelly_Mechanism
-    ```
-2. **Install requirements:**  
-   *(Add requirements.txt if needed)*
-
-3. **Run experiments:**  
-   Edit `config_table.py` to set up your scenario, then execute:
+ **Run experiments:**  
+   Edit `config_data.py` to set up your scenario, then execute:
     ```bash
     python main.py
+    ```
+    Or:
+       ```bash
+    python main_table.py
     ```
 
 ---
