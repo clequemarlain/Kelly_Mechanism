@@ -1,4 +1,4 @@
-import torch
+import torch, csv
 import numpy as np
 from utils import *
 from alpha_fair import *
@@ -69,7 +69,8 @@ def run_simulation():
     return results
 
 
-def display_results_plain(results):
+def display_results_plain(results, save_path=config["save_path"]):
+    lrMethods = config["lrMethods"]
     # Organize results
     table_data = defaultdict(lambda: defaultdict(dict))
     for row in results:
@@ -81,23 +82,33 @@ def display_results_plain(results):
 
     # Build rows
     rows = []
-    headers = ["gamma", "n", "SBRD", "DAQ", "XL"]
+    headers = ["gamma", "n"] + lrMethods
+
+    # Replace inf with ∞ symbol
+    def fmt(val):
+        return "∞" if val == float("inf") else str(val)
 
     for gamma in sorted(table_data.keys()):
         for n in sorted(table_data[gamma].keys()):
-            sbrd = table_data[gamma][n].get("SBRD", "---")
-            daq = table_data[gamma][n].get("DAQ", "---")
-            xl = table_data[gamma][n].get("XL", "---")
+            row = [gamma, n]
+            for lrMethod in lrMethods:
+                time = table_data[gamma][n].get(lrMethod, "---")
+                row.append(fmt(time))
 
-            # Replace inf with ∞ symbol
-            def fmt(val):
-                return "∞" if val == float("inf") else str(val)
-
-            rows.append([gamma, n, fmt(sbrd), fmt(daq), fmt(xl)])
+            rows.append(row)
 
     # Print the table
     print(tabulate(rows, headers=headers, tablefmt="grid"))
     print(f"############## ############################# ########################")
+
+    # Save table to file if a path is provided
+    if save_path:
+        with open(save_path, mode="w", newline='', encoding="utf-8") as file:
+            writer = csv.writer(file, delimiter=";")
+            writer.writerow(headers)
+            for row in rows:
+                writer.writerow(row)
+        print(f"\n✅ Table saved to {save_path}")
 
 
 
