@@ -49,7 +49,7 @@ This project focuses on the study and simulation of **distributed learning dynam
   Iterative computation of each player's best response.  
   _Focus:_ Equilibrium search, convergence/divergence analysis
 
-- **Dual Averaging (DAQ):**  
+- **Dual Averaging, with Quadratic regulizer (DAQ) and Hentropic regulizer (DAH):**  
   No-regret, gradient-based learning.  
   _Focus:_ Robustness and stability under noisy feedback
 
