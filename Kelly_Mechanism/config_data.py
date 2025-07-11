@@ -19,7 +19,7 @@ SIMULATION_CONFIG = {
     "x_label": "Time step (t)",  # Label for the x-axis in the output plot
     "metric": "speed",         # "speed" or "lpoa",or "lsw"
     "y_label": "||BR(z) -z||",  # Label for the y-axis in the output plot (error between best response and current state)
-    "ylog_scale": False,       # Whether to use a logarithmic scale on the y-axis in the plot, recommended for speed's convergence plot
+    "ylog_scale": True,       # Whether to use a logarithmic scale on the y-axis in the plot, recommended for speed's convergence plot
     "saveFileName": "Error_",  # Prefix for the filename where results/plots are saved
     "pltText": True,           # Whether to display text annotations on the plot
     "gamma": 0                 # Exponent controlling the heterogeneity of the a_vector
