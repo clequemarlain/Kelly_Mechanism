@@ -2,7 +2,7 @@
 
 SIMULATION_CONFIG = {
 
-    "lrMethods": ["SBRD", "NumSBRD", "XL", "DAQ", "Hybrid"],  # Learning methods to test Synchronous Best Response Dynamic (SBRD or NumSBRD for every alpha>=0), Dual Averaging Quadratic Reg (DAQ), Exponential Learning (XL)
+    "lrMethods": ["SBRD", "XL", "DAQ", "DAH", "Hybrid"],  # Learning methods to test Synchronous Best Response Dynamic (SBRD or NumSBRD for every alpha>=0), Dual Averaging Quadratic Reg (DAQ), Exponential Learning (XL)
     "Hybrid_funcs": ["DAQ", "DAH"], #
     "T": 1000,                 # Number of iterations in the learning process
     "alpha": 1,                # Fairness parameter in utility (e.g., α-fair utility)
@@ -38,6 +38,7 @@ SIMULATION_CONFIG_table = {
     "epsilon": 1e-3,               # Epsilon parameter to avoid numerical issues (e.g., division by zero)
     "alpha": 0,                    # Fairness parameter for the alpha-fair utility (alpha = 0 means log utility)
     "tol": 1e-5,                   # Tolerance threshold for stopping criteria (convergence)
+    "save_path": "results_table.csv",  # Path to save the result (.csv file)
 
     # Learning methods to compare in the simulation
     "lrMethods": ["SBRD", "DAQ", "XL"],  # List of learning methods: SBRD = Best Response, DAQ = Dual Averaging Quadratic, XL = Extra Learning
