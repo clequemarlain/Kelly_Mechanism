@@ -5,6 +5,11 @@
 
 # CoGNETs Game Catalogue – Kelly Mechanism Simulations
 
+<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <img src="kellyMechanism.drawio.pdf" alt="Kelly Mechanism" style="width: 100%;">
+</div>
+
+
 Welcome to the repository for **Kelly Mechanism Simulations** developed within the **CoGNETs Project (Continuums of Game NETs)**.  
 This repository provides simulation scripts and learning algorithms for resource allocation games, as detailed in the **CoGNETs Game Catalogue (Section 5.1: Kelly Mechanism)**.
 
