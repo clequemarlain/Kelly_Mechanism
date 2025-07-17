@@ -32,8 +32,6 @@ This repository implements algorithms described in the CoGNETs Game Catalogue:
 📄 **Related Publication:**  
 _"Learning to Bid in Proportional Allocation Auctions with Budget Constraints."_
 
-👉 [Access the report on HAL](https://hal.archives-ouvertes.fr/hal-XXXXXXX) <br>
-
 ---
 
 ## 🔍 Problem Scope
